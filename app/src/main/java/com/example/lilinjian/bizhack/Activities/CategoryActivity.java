@@ -9,10 +9,18 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
+import com.android.volley.Request;
 import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.JsonRequest;
 import com.example.lilinjian.bizhack.Data.CategoryRecyclerViewAdaptor;
 import com.example.lilinjian.bizhack.Model.Category;
+import com.example.lilinjian.bizhack.Parser.CategoryParser;
 import com.example.lilinjian.bizhack.R;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
 
 import java.util.ArrayList;
 
@@ -76,6 +84,27 @@ public class CategoryActivity extends AppCompatActivity {
         a.add(category_8);
 
         //TODO
+        CategoryParser categoryParser = new CategoryParser();
+        String url = "https://bizhacks.bbycastatic.ca/mobile-si/si/catalog?lang=en";
+        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET,
+                url, new Response.Listener<JSONObject>() {
+            @Override
+            public void onResponse(JSONObject response) {
+
+                try{
+                    JSONArray moviesArray = response.getJSONArray("Search");
+
+                    for (int i = 0; i < moviesArray.length(); i++) {
+
+                        JSONObject movieObj = moviesArray.getJSONObject(i);
+
+                        Category category = new Category();
+
+                        categories.add(category);
+
+
+                    }
+
         return a;
     }
 

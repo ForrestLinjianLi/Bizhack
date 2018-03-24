@@ -14,6 +14,7 @@ public class CategoryManager implements Iterable<Category>{
     private static CategoryManager instance;
 
 
+
     @NonNull
     @Override
     public Iterator<Category> iterator() {
