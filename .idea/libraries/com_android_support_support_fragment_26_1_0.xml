@@ -1,13 +1,8 @@
 <component name="libraryTable">
   <library name="com.android.support:support-fragment-26.1.0">
     <CLASSES>
-<<<<<<< HEAD
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/ae83172c7d9e451f46d0d9e51a68cb8c/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/ae83172c7d9e451f46d0d9e51a68cb8c/res" />
-=======
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/108e004b4fb3ec6dd1f79ab70f72470f/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/108e004b4fb3ec6dd1f79ab70f72470f/jars/classes.jar!/" />
->>>>>>> 7808fced96f59ca022c7f814720bf8428897b430
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/9fcced32d9d8f89efbe673d9b5a16176/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/support-fragment-26.1.0.aar/9fcced32d9d8f89efbe673d9b5a16176/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
