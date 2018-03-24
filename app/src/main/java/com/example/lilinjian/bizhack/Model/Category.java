@@ -7,16 +7,10 @@ import java.util.ArrayList;
  */
 
 public class Category {
-    private ArrayList<Category> categoryArrayList;
+    private String name;
 
-    public Category() {
-        this.categoryArrayList = new ArrayList<Category>();
+    public Category(String name) {
+        this.name = name;
     }
-
-    public ArrayList<Category> getCategoryArrayList() {
-        return categoryArrayList;
-    }
-
-
 
 }
