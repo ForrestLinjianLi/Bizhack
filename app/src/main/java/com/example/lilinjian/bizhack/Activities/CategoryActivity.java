@@ -44,14 +44,15 @@ public class CategoryActivity extends AppCompatActivity {
 
         categories = new ArrayList<>();
         categories = getCategories();
-        categoryRecyclerViewAdaptor = new CategoryRecyclerViewAdaptor(this,categories);
-        recyclerView.setAdapter(categoryRecyclerViewAdaptor);
-        categoryRecyclerViewAdaptor.notifyDataSetChanged();
-
         if (getIntent().getExtras() != null){
             Bundle subCategories = getIntent().getExtras();
             categories = (ArrayList)subCategories.getSerializable("documents");
         }
+        categoryRecyclerViewAdaptor = new CategoryRecyclerViewAdaptor(this,categories);
+        recyclerView.setAdapter(categoryRecyclerViewAdaptor);
+        categoryRecyclerViewAdaptor.notifyDataSetChanged();
+
+
     }
 
     public ArrayList getCategories() {
@@ -60,11 +61,19 @@ public class CategoryActivity extends AppCompatActivity {
         Category category_2 = new Category("category_2");
         Category category_3 = new Category("category_3");
         Category category_4 = new Category("category_4");
+        Category category_5 = new Category("category_5");
+        Category category_6 = new Category("category_7");
+        Category category_7 = new Category("category_8");
+        Category category_8 = new Category("category_9");
         category_1.addCategory(category_2);
         category_2.addCategory(category_3);
         category_2.addCategory(category_4);
         ArrayList a = new ArrayList();
         a.add(category_1);
+        a.add(category_5);
+        a.add(category_6);
+        a.add(category_7);
+        a.add(category_8);
 
         //TODO
         return a;

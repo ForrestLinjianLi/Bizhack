@@ -11,8 +11,11 @@ import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
+import com.example.lilinjian.bizhack.Model.Category;
 import com.example.lilinjian.bizhack.R;
 import com.google.zxing.Result;
 
@@ -25,19 +28,22 @@ public class MainActivity extends AppCompatActivity implements ZXingScannerView.
 
     private static final int REQUEST_CAMERA = 1;
     private ZXingScannerView scannerView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         scannerView = new ZXingScannerView(this);
 
-        setContentView(scannerView);
-        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M){
-            if(checkPermission()){
-                Toast.makeText(MainActivity.this,"Permission is granted!",Toast.LENGTH_LONG).show();
-            }else{
+        //setContentView();
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            if (checkPermission()) {
+                Toast.makeText(MainActivity.this, "Permission is granted!", Toast.LENGTH_LONG).show();
+            } else {
                 requestPermissions();
             }
         }
+        Intent intent = new Intent(MainActivity.this, CategoryActivity.class);
+        startActivity(intent);
     }
     private boolean checkPermission(){
         return (ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED);

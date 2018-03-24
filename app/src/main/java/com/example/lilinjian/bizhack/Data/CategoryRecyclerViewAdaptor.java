@@ -31,7 +31,7 @@ public class CategoryRecyclerViewAdaptor extends RecyclerView.Adapter<CategoryRe
 
     @Override
     public CategoryRecyclerViewAdaptor.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.category_row, parent);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.category_row, parent,false);
 
         return new ViewHolder(view, context);
     }
@@ -45,13 +45,13 @@ public class CategoryRecyclerViewAdaptor extends RecyclerView.Adapter<CategoryRe
 
     @Override
     public int getItemCount() {
-        return 0;
+        return categories.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
         TextView category;
 
-        public ViewHolder(View itemView,Context ctx) {
+        public ViewHolder(View itemView,final Context ctx) {
             super(itemView);
             context = ctx;
             category = itemView.findViewById(R.id.categoryTextViewID);
@@ -63,7 +63,7 @@ public class CategoryRecyclerViewAdaptor extends RecyclerView.Adapter<CategoryRe
                     bundle.putSerializable("documents", subcategories);
                     Intent intent = new Intent(context, CategoryActivity.class);
                     intent.putExtras(bundle);
-                    context.startActivity(intent);
+                    ctx.startActivity(intent);
                 }
             });
         }
