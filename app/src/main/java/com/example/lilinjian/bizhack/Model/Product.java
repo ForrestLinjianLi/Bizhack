@@ -5,4 +5,5 @@ package com.example.lilinjian.bizhack.Model;
  */
 
 public class Product {
+
 }
