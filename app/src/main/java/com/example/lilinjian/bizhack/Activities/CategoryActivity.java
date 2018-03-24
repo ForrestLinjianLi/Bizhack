@@ -11,6 +11,7 @@ import android.view.View;
 
 import com.android.volley.RequestQueue;
 import com.example.lilinjian.bizhack.Data.CategoryRecyclerViewAdaptor;
+import com.example.lilinjian.bizhack.Model.Category;
 import com.example.lilinjian.bizhack.R;
 
 import java.util.ArrayList;

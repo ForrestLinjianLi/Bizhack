@@ -1,5 +1,7 @@
 package com.example.lilinjian.bizhack.Parser;
 
+import com.example.lilinjian.bizhack.Model.Category;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
