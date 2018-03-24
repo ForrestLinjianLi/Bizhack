@@ -14,8 +14,9 @@ public class Category implements Serializable{
     private ArrayList<Category> categoryArrayList;
     private String categoryName;
 
-    public Category() {
+    public Category(String name) {
         this.categoryArrayList = new ArrayList<Category>();
+        this.categoryName = name;
     }
 
     public ArrayList<Category> getCategoryArrayList() {
@@ -24,6 +25,10 @@ public class Category implements Serializable{
 
     public void setCategoryName(String categoryName) {
         this.categoryName = categoryName;
+    }
+
+    public void addCategory(Category category){
+        categoryArrayList.add(category);
     }
 
     public String getCategoryName() {

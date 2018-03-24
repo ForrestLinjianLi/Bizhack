@@ -59,8 +59,18 @@ public class CategoryActivity extends AppCompatActivity {
 
     public ArrayList getCategories() {
         categories.clear();
+        Category category_1 = new Category("category_1");
+        Category category_2 = new Category("category_2");
+        Category category_3 = new Category("category_3");
+        Category category_4 = new Category("category_4");
+        category_1.addCategory(category_2);
+        category_2.addCategory(category_3);
+        category_2.addCategory(category_4);
+        ArrayList a = new ArrayList();
+        a.add(category_1);
+
         //TODO
-        return categories;
+        return a;
     }
 
 
