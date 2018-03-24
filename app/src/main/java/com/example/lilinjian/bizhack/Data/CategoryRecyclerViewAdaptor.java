@@ -10,10 +10,8 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.example.lilinjian.bizhack.Activities.CategoryActivity;
-import com.example.lilinjian.bizhack.Model.Category;
 import com.example.lilinjian.bizhack.R;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
